@@ -1,1 +1,28 @@
-{\n  "name": "your-project-name",\n  "version": "1.0.0",\n  "private": true,\n  "dependencies": {\n    "next": "latest",\n    "react": "latest",\n    "react-dom": "latest"\n  },\n  "devDependencies": {\n    "eslint": "latest",\n    "eslint-config-next": "latest"\n  },\n  "scripts": {\n    "dev": "next dev",\n    "build": "next build",\n    "start": "next start"\n  },\n  "eslintConfig": {\n    "extends": "next/core-web-vitals"\n  },\n  "next": {\n    "reactStrictMode": true\n  }\n}
+{
+  "name": "alphabaijinde-site",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "25.2.2",
+    "@types/react": "19.2.13",
+    "eslint": "9.39.2",
+    "eslint-config-next": "16.1.6"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+  },
+  "eslintConfig": {
+    "extends": "next/core-web-vitals"
+  },
+  "next": {
+    "reactStrictMode": true
+  }
+}
