@@ -1,105 +1,88 @@
 import React from 'react';
 
+const projects = [
+    {
+        name: 'xhs-obsidian-pipeline',
+        desc: '将小红书链接转成图谱友好的 Obsidian 卡片，自动沉淀图片、热评和深度笔记。适合作为知识自动化产品化入口。',
+        href: 'https://github.com/Alphabaijinde/xhs-obsidian-pipeline',
+        proof: '22+ stars',
+        tags: ['Python', 'Obsidian', 'Knowledge automation'],
+    },
+    {
+        name: 'Simulation workflow stack',
+        desc: '围绕 MuJoCo、Unreal Engine 5、CARLA、SUMO、OpenDRIVE 和 OpenSCENARIO 的长期仿真工作流沉淀。',
+        href: 'https://github.com/Alphabaijinde/matrix',
+        proof: 'Robotics / autonomous systems',
+        tags: ['MATRiX', 'CARLA', 'SUMO'],
+    },
+    {
+        name: 'odrview',
+        desc: '复现 OpenDRIVE viewer，用于道路拓扑查看、地图调试和仿真前处理。',
+        href: 'https://github.com/Alphabaijinde/odrview',
+        proof: '7+ stars',
+        tags: ['C++', 'OpenDRIVE', 'Road topology'],
+    },
+    {
+        name: 'openclaw-opencode-bridge',
+        desc: 'OpenAI-compatible bridge，让 OpenClaw 接入本地 opencode 和更灵活的模型调用路径。',
+        href: 'https://github.com/Alphabaijinde/openclaw-opencode-bridge',
+        proof: '2+ stars',
+        tags: ['JavaScript', 'AI agents', 'Local bridge'],
+    },
+    {
+        name: 'imperial-system',
+        desc: 'AI 皇帝决策模拟，探索性格、情绪、朝代制度和多智能体行为建模。',
+        href: 'https://github.com/Alphabaijinde/imperial-system',
+        proof: 'Prototype',
+        tags: ['TypeScript', 'Multi-agent', 'Simulation'],
+    },
+    {
+        name: 'github-trending-ai',
+        desc: '围绕 AI 方向 GitHub 趋势和仓库信号的轻量跟踪工具，适合扩展成选题和投研辅助流。',
+        href: 'https://github.com/Alphabaijinde/github-trending-ai',
+        proof: 'Research utility',
+        tags: ['Shell', 'Repository intelligence'],
+    },
+];
+
 const ProjectsPage = () => {
     return (
-        <div style={{ display: 'grid', gap: 24 }}>
-            <header style={{ display: 'grid', gap: 8 }}>
-                <h1 style={{ margin: 0 }}>项目展示</h1>
-                <p style={{ margin: 0, color: '#cbd5f5', lineHeight: 1.7 }}>
-                    聚焦仿真平台、场景构建与自动驾驶实验的关键项目。
-                </p>
-            </header>
-
-            <section
-                style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-                    gap: 16,
-                }}
-            >
-                {[
-                    {
-                        name: 'MATRiX',
-                        desc: '高保真仿真平台，融合 MuJoCo、Unreal Engine 5 与 CARLA，服务机器人研究。',
-                        tags: ['仿真平台', '多引擎融合', '高保真交互'],
-                    },
-                    {
-                        name: 'SpecBmad',
-                        desc: '面向真实场景的行为建模与评估流程，支持数据闭环。',
-                        tags: ['行为建模', '评估流程', '数据闭环'],
-                    },
-                    {
-                        name: 'RoadRunner',
-                        desc: '自动驾驶场景生成与道路拓扑模拟的实验项目。',
-                        tags: ['自动驾驶', '场景生成', '道路拓扑'],
-                    },
-                ].map((project) => (
-                    <article
-                        key={project.name}
-                        style={{
-                            padding: 20,
-                            borderRadius: 18,
-                            background: 'rgba(15, 23, 42, 0.8)',
-                            border: '1px solid rgba(148, 163, 184, 0.2)',
-                            display: 'grid',
-                            gap: 12,
-                        }}
-                    >
-                        <div>
-                            <h2 style={{ margin: 0 }}>{project.name}</h2>
-                            <p style={{ margin: '8px 0 0', color: '#cbd5f5', lineHeight: 1.7 }}>
-                                {project.desc}
-                            </p>
-                        </div>
-                        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                            {project.tags.map((tag) => (
-                                <span
-                                    key={tag}
-                                    style={{
-                                        fontSize: 12,
-                                        padding: '4px 10px',
-                                        borderRadius: 999,
-                                        background: 'rgba(56, 189, 248, 0.16)',
-                                        color: '#bae6fd',
-                                    }}
-                                >
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
-                    </article>
-                ))}
+        <>
+            <section className="page-hero">
+                <div className="section__inner">
+                    <p className="eyebrow">Projects</p>
+                    <h1 className="page-title">能被理解、复用和转化的项目</h1>
+                    <p className="page-intro">
+                        这里不只列代码仓库，而是把项目放进明确的应用场景：机器人仿真、
+                        AI Agent、本地自动化和知识资产沉淀。
+                    </p>
+                </div>
             </section>
 
-            <section
-                style={{
-                    padding: 20,
-                    borderRadius: 16,
-                    background: 'rgba(30, 41, 59, 0.6)',
-                    border: '1px solid rgba(148, 163, 184, 0.2)',
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: 12,
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                }}
-            >
-                <div style={{ color: '#cbd5f5' }}>更多项目与代码请访问 GitHub。</div>
-                <a
-                    href="https://github.com/Alphabaijinde"
-                    style={{
-                        color: '#0f172a',
-                        background: '#38bdf8',
-                        textDecoration: 'none',
-                        padding: '8px 16px',
-                        borderRadius: 999,
-                        fontWeight: 600,
-                    }}
-                >
-                    前往 GitHub
-                </a>
+            <section className="page-section">
+                <div className="section__inner">
+                    <div className="grid grid--3">
+                        {projects.map((project) => (
+                            <article className="card card--strong" key={project.name}>
+                                <p className="eyebrow">{project.proof}</p>
+                                <h2>{project.name}</h2>
+                                <p>{project.desc}</p>
+                                <div className="tag-row">
+                                    {project.tags.map((tag) => (
+                                        <span className="tag" key={tag}>
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                                <a className="card-link" href={project.href}>
+                                    View repository
+                                </a>
+                            </article>
+                        ))}
+                    </div>
+                </div>
             </section>
-        </div>
+        </>
     );
 };
 

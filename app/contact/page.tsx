@@ -2,124 +2,52 @@ import React from 'react';
 
 const ContactPage = () => {
     return (
-        <div style={{ display: 'grid', gap: 24 }}>
-            <header style={{ display: 'grid', gap: 8 }}>
-                <h1 style={{ margin: 0 }}>联系我</h1>
-                <p style={{ margin: 0, color: '#cbd5f5', lineHeight: 1.7 }}>
-                    无论是研究合作、平台共建还是技术交流，都欢迎联系。
-                </p>
-            </header>
-
-            <section
-                style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-                    gap: 16,
-                }}
-            >
-                <div
-                    style={{
-                        padding: 20,
-                        borderRadius: 16,
-                        background: 'rgba(15, 23, 42, 0.8)',
-                        border: '1px solid rgba(148, 163, 184, 0.2)',
-                    }}
-                >
-                    <h3 style={{ marginTop: 0 }}>GitHub</h3>
-                    <a
-                        href="https://github.com/Alphabaijinde"
-                        style={{ color: '#38bdf8', textDecoration: 'none' }}
-                    >
-                        github.com/Alphabaijinde
-                    </a>
-                </div>
-                <div
-                    style={{
-                        padding: 20,
-                        borderRadius: 16,
-                        background: 'rgba(15, 23, 42, 0.8)',
-                        border: '1px solid rgba(148, 163, 184, 0.2)',
-                    }}
-                >
-                    <h3 style={{ marginTop: 0 }}>协作方向</h3>
-                    <p style={{ margin: 0, color: '#cbd5f5', lineHeight: 1.7 }}>
-                        仿真平台共建、自动驾驶场景生成、研究平台工程化。
+        <>
+            <section className="page-hero">
+                <div className="section__inner">
+                    <p className="eyebrow">Contact</p>
+                    <h1 className="page-title">聊一个具体问题</h1>
+                    <p className="page-intro">
+                        最适合联系我的方向：机器人/自动驾驶仿真工作流、本地 AI Agent 自动化、
+                        Obsidian 知识系统、开源项目包装和技术内容共创。
                     </p>
                 </div>
             </section>
 
-            <form
-                style={{
-                    display: 'grid',
-                    gap: 12,
-                    padding: 20,
-                    borderRadius: 16,
-                    background: 'rgba(30, 41, 59, 0.6)',
-                    border: '1px solid rgba(148, 163, 184, 0.2)',
-                }}
-            >
-                <label style={{ display: 'grid', gap: 6 }}>
-                    <span>姓名</span>
-                    <input
-                        type="text"
-                        name="name"
-                        required
-                        style={{
-                            padding: '10px 12px',
-                            borderRadius: 10,
-                            border: '1px solid rgba(148, 163, 184, 0.3)',
-                            background: 'rgba(15, 23, 42, 0.9)',
-                            color: '#e2e8f0',
-                        }}
-                    />
-                </label>
-                <label style={{ display: 'grid', gap: 6 }}>
-                    <span>邮箱</span>
-                    <input
-                        type="email"
-                        name="email"
-                        required
-                        style={{
-                            padding: '10px 12px',
-                            borderRadius: 10,
-                            border: '1px solid rgba(148, 163, 184, 0.3)',
-                            background: 'rgba(15, 23, 42, 0.9)',
-                            color: '#e2e8f0',
-                        }}
-                    />
-                </label>
-                <label style={{ display: 'grid', gap: 6 }}>
-                    <span>需求描述</span>
-                    <textarea
-                        name="message"
-                        required
-                        rows={5}
-                        style={{
-                            padding: '10px 12px',
-                            borderRadius: 10,
-                            border: '1px solid rgba(148, 163, 184, 0.3)',
-                            background: 'rgba(15, 23, 42, 0.9)',
-                            color: '#e2e8f0',
-                        }}
-                    />
-                </label>
-                <button
-                    type="submit"
-                    style={{
-                        marginTop: 8,
-                        background: '#38bdf8',
-                        color: '#0f172a',
-                        padding: '10px 18px',
-                        borderRadius: 999,
-                        border: 'none',
-                        fontWeight: 600,
-                        cursor: 'pointer',
-                    }}
-                >
-                    发送信息
-                </button>
-            </form>
-        </div>
+            <section className="page-section">
+                <div className="section__inner contact-panel">
+                    <article className="card card--strong">
+                        <h2>直接联系</h2>
+                        <p>
+                            邮件里写清楚目标、现状、已有材料和希望的交付方式，可以更快判断是否适合合作。
+                        </p>
+                        <div className="contact-list">
+                            <div className="contact-item">
+                                <span>Email</span>
+                                <a href="mailto:baijindegus@gmail.com">baijindegus@gmail.com</a>
+                            </div>
+                            <div className="contact-item">
+                                <span>GitHub</span>
+                                <a href="https://github.com/Alphabaijinde">github.com/Alphabaijinde</a>
+                            </div>
+                        </div>
+                        <a className="card-link" href="mailto:baijindegus@gmail.com">
+                            Send email
+                        </a>
+                    </article>
+
+                    <article className="card">
+                        <h2>邮件模板</h2>
+                        <ul className="service-list">
+                            <li>背景：你在做什么项目，卡在哪里</li>
+                            <li>目标：希望解决什么问题，什么时候需要结果</li>
+                            <li>材料：代码、文档、数据、截图、demo 或已有方案</li>
+                            <li>交付：咨询建议、架构评审、原型代码、文档或自动化脚本</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </>
     );
 };
 

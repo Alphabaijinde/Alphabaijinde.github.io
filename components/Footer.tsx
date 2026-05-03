@@ -3,37 +3,17 @@ import Link from 'next/link';
 
 const Footer: React.FC = () => {
     return (
-        <footer
-            style={{
-                borderTop: '1px solid rgba(148, 163, 184, 0.2)',
-                padding: '32px 20px 40px',
-                background: 'rgba(11, 15, 26, 0.8)',
-            }}
-        >
-            <div
-                style={{
-                    maxWidth: 1080,
-                    margin: '0 auto',
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: 16,
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    color: '#94a3b8',
-                    fontSize: 14,
-                }}
-            >
-                <div>
-                    &copy; {new Date().getFullYear()} Alphabaijinde. All rights reserved.
-                </div>
-                <div style={{ display: 'flex', gap: 16 }}>
-                    <a
-                        href="https://github.com/Alphabaijinde"
-                        style={{ color: '#e2e8f0', textDecoration: 'none' }}
-                    >
+        <footer className="site-footer">
+            <div className="footer__inner">
+                <div>&copy; {new Date().getFullYear()} Alphabaijinde. Simulation-first systems.</div>
+                <div className="footer-links">
+                    <a href="https://github.com/Alphabaijinde">
                         GitHub
                     </a>
-                    <Link href="/contact" style={{ color: '#e2e8f0', textDecoration: 'none' }}>
+                    <Link href="/projects">
+                        Projects
+                    </Link>
+                    <Link href="/contact">
                         Contact
                     </Link>
                 </div>

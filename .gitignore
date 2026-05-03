@@ -42,3 +42,7 @@ out/
 # next.js build output
 /.next/
 out/
+
+# local verification artifacts
+.playwright-cli/
+output/
